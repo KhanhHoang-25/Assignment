@@ -1,0 +1,64 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 200ms;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.detail {
+  height: fit-content;
+  margin: auto;
+  padding: 5px;
+  background: #ffffff;
+  border-radius: 10px;
+  width: 30%;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  transition: all 2s ease-in-out;
+  background-color: #333;
+}
+.detail img {
+  width: 100%;
+  border-radius: 0;
+}
+.detail h2 {
+  margin-top: 0;
+  color: #fff8f8;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.detail .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+}
+.detail .close:hover {
+  color: #06d85f;
+}
+.detail .content {
+  max-height: 30%;
+  overflow: auto;
+  color: #fff8f8;
+  font-family: Tahoma, Arial, sans-serif;
+  margin-bottom: 20px;
+}
